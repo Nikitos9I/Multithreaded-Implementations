@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LinearizabilityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-22T00:17:49" hostname="spb-nsavinov1" time="6.361">
-  <properties/>
-  <testcase name="testLinearizability" classname="LinearizabilityTest" time="6.361"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

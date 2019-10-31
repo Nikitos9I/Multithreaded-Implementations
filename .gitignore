@@ -1,5 +1,6 @@
 #Compiled
-/target
+/target/
+/build/
 
 #Mac
 .DS_Store

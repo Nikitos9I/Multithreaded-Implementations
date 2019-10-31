@@ -1,0 +1,8 @@
+=== LockFreedomTest
+--- 0: Performed 0 operations
+7--- 1: Performed 896403 operations (pause/resumes 339)
+8--- 2: Performed 1326898 operations (pause/resumes 339)
+8--- 3: Performed 1405580 operations (pause/resumes 339)
+8--- 4: Performed 1422868 operations (pause/resumes 339)
+8--- 5: Performed 1439217 operations (pause/resumes 339)
+8------ Done with 1440057 operations (pause/resumes 340)

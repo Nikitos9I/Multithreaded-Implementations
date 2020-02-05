@@ -30,14 +30,12 @@ class SynchronousQueueMS<E> : SynchronousQueue<E> {
                     if (next != null) {
                         this.tail.compareAndSet(tail, next)
                     } else if (tail.next.compareAndSet(next, offer)) {
-                        // если не получится, придет другая корутина и сделает это на строчку выше
                         this.tail.compareAndSet(tail, offer)
 
                         suspendCoroutine<Unit> { cont ->
                             offer.cont = cont
                         }
 
-                        // попытка выкинуть себя же из очереди
                         head = this.head.get()
                         if (head.next.get() == offer) {
                             this.head.compareAndSet(head, offer)
@@ -74,14 +72,12 @@ class SynchronousQueueMS<E> : SynchronousQueue<E> {
                     if (next != null) {
                         this.tail.compareAndSet(tail, next)
                     } else if (tail.next.compareAndSet(next, offer)) {
-                        // если не получится, придет другая корутина и сделает это на строчку выше
                         this.tail.compareAndSet(tail, offer)
 
                         suspendCoroutine<Unit> { cont ->
                             offer.cont = cont
                         }
 
-                        // попытка выкинуть себя же из очереди
                         head = this.head.get()
                         if (head.next.get() == offer) {
                             this.head.compareAndSet(head, offer)
